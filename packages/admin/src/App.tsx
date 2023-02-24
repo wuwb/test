@@ -25,6 +25,10 @@ import { ProductList } from "./product/ProductList";
 import { ProductCreate } from "./product/ProductCreate";
 import { ProductEdit } from "./product/ProductEdit";
 import { ProductShow } from "./product/ProductShow";
+import { OrderDetailList } from "./orderDetail/OrderDetailList";
+import { OrderDetailCreate } from "./orderDetail/OrderDetailCreate";
+import { OrderDetailEdit } from "./orderDetail/OrderDetailEdit";
+import { OrderDetailShow } from "./orderDetail/OrderDetailShow";
 import { httpAuthProvider } from "./auth-provider/ra-auth-http";
 
 const App = (): React.ReactElement => {
@@ -85,6 +89,13 @@ const App = (): React.ReactElement => {
           edit={ProductEdit}
           create={ProductCreate}
           show={ProductShow}
+        />
+        <Resource
+          name="OrderDetail"
+          list={OrderDetailList}
+          edit={OrderDetailEdit}
+          create={OrderDetailCreate}
+          show={OrderDetailShow}
         />
       </Admin>
     </div>
